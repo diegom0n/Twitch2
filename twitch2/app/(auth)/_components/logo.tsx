@@ -24,7 +24,7 @@ export const Logo = () => {
                 font.className
                 )}>
                 <p className="text-xl font-semibold">
-                    Streamons
+                    StreamOn
                 </p>
                 <p className="text-sm text-muted-foreground">
                     Let&apos;s play
