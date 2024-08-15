@@ -7,7 +7,7 @@ import {
     AvatarFallback,
     AvatarImage,
 } from "@/components/ui/avatar";
-import { LiveBadge } from "./live-badge";
+import { LiveBadge } from "@/components/live-badge";
 
 const avatarSizes = cva(
     "",

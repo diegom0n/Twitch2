@@ -14,5 +14,5 @@ export const LiveBadge = ({
         )}>
             Live
         </div>
-    )
-}
+    );
+};
