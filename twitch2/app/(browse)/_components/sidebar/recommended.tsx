@@ -32,7 +32,7 @@ export const Recommended = ({
                         key={user.id}
                         username={user.username}
                         imageUrl={user.imageUrl}
-                        isLive={user.stream?.isLive}
+                        isLive={user.stream?.isLive ? true: false}
                     />
                 ))}
             </ul>
