@@ -44,7 +44,7 @@ export const isFollowingUser = async (id: string) => {
         });
 
         if (!otherUser) {
-            throw new Error("User not found");
+            throw new Error("Usuario no encontrado");
         }
 
         if (otherUser.id === self.id) {
@@ -72,11 +72,11 @@ export const followUser = async (id: string) => {
     });
 
     if (!otherUser) {
-        throw new Error("User not found");
+        throw new Error("Usuario no encontrado");
     }
 
     if (otherUser.id === self.id) {
-        throw new Error("Cannot follow yourself");
+        throw new Error("No puedes hacer eso");
     }
 
     const existingFollow = await db.follow.findFirst({
@@ -87,7 +87,7 @@ export const followUser = async (id: string) => {
     });
 
     if (existingFollow) {
-        throw new Error("Already following");
+        throw new Error("Ya lo sigues");
     }
 
     const follow = await db.follow.create({
@@ -114,7 +114,7 @@ export const unfollowUser = async (id: string) => {
     });
 
     if (!otherUser) {
-        throw new Error("User not found");
+        throw new Error("Usuario no encontrado");
     }
 
     if (otherUser.id === self.id) {
@@ -129,7 +129,7 @@ export const unfollowUser = async (id: string) => {
     });
 
     if (!existingFollow) {
-        throw new Error("Not following");
+        throw new Error("No lo sigues");
     }
 
     const follow = await db.follow.delete({

@@ -33,10 +33,10 @@ export const BioModal = ({
         startTransition(() => {
             updateUser({ bio: value })
                 .then(() => {
-                    toast.success("User bio updated");
+                    toast.success("Biografiía actualizada");
                     closeRef.current?.click();
                 })
-                .catch(() => toast.error("Something went wrong"));
+                .catch(() => toast.error("Algo salió mal"));
         });
     }
 
@@ -44,12 +44,12 @@ export const BioModal = ({
         <Dialog>
             <DialogTrigger asChild>
                 <Button variant="link" size="sm" className="ml-auto">
-                    Edit
+                    Editar
                 </Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Edit user bio</DialogTitle>
+                    <DialogTitle>Editar biografía</DialogTitle>
                 </DialogHeader>
                 <form onSubmit={onSubmit} className="space-y-4">
                     <Textarea 
@@ -62,7 +62,7 @@ export const BioModal = ({
                     <div className="flex justify-between">
                         <DialogClose ref={closeRef} asChild>
                             <Button type="button" variant="ghost">
-                                Cancel
+                                Cancelar
                             </Button>
                         </DialogClose>
                         <Button
@@ -70,7 +70,7 @@ export const BioModal = ({
                             type="submit"
                             variant="primary"
                         >
-                            Save
+                            Guardar
                         </Button>
                     </div>
                 </form>

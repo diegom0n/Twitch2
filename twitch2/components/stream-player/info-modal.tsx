@@ -42,11 +42,11 @@ export const InfoModal = ({
         startTransition(() => {
             updateStream({ thumbnailUrl: null })
                 .then(() => {
-                    toast.success("Thumbnail removed");
+                    toast.success("Miniatura eliminada");
                     setThumbnailUrl("");
                     closeRef?.current?.click();
                 })
-                .catch(() => toast.error("Something went wrong"));
+                .catch(() => toast.error("Algo ha salido mal"));
         });
     }
 
@@ -56,10 +56,10 @@ export const InfoModal = ({
         startTransition(() => {
             updateStream({ name: name })
                 .then(() => {
-                    toast.success("Stream updated");
+                    toast.success("Stream actualizado");
                     closeRef?.current?.click();
                 })
-                .catch(() => toast.error("Something went wrong"))
+                .catch(() => toast.error("Algo ha salido mal"))
         });
     };
 
@@ -71,35 +71,35 @@ export const InfoModal = ({
         <Dialog>
             <DialogTrigger asChild>
                 <Button variant="link" size="sm" className="ml-auto">
-                    Edit
+                    Editar
                 </Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
                     <DialogTitle>
-                        Edit stream info
+                        Editar información
                     </DialogTitle>
                 </DialogHeader>
                 <form onSubmit={onSubmit} className="space-y-14">
                     <div className="space-y-2">
                         <Label>
-                            Name
+                            Nombre
                         </Label>
                         <Input 
                             disabled={isPending}
-                            placeholder="Stream name"
+                            placeholder="Nombre del stream"
                             onChange={onChange}
                             value={name}
                         />
                     </div>
                     <div className="space-y-2">
                         <Label>
-                            Thumbnail
+                            Miniatura
                         </Label>
                         {thumbnailUrl ? (
                             <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10">
                                 <div className="absolute top-2 right-2 z-[10]">
-                                    <Hint label="Remove thumbnail" asChild side="left">
+                                    <Hint label="Eliminar miniatura" asChild side="left">
                                         <Button
                                             type="button"
                                             disabled={isPending}
@@ -111,7 +111,7 @@ export const InfoModal = ({
                                     </Hint>
                                 </div>
                                 <Image
-                                    alt="Thumbnail"
+                                    alt="Miniatura del stream"
                                     src={thumbnailUrl}
                                     fill
                                     className="object-cover"
@@ -141,7 +141,7 @@ export const InfoModal = ({
                     <div className="flex justify-between">
                         <DialogClose ref={closeRef} asChild>
                             <Button type="button" variant="ghost">
-                                Cancel
+                                Cancelar
                             </Button>
                         </DialogClose>
                         <Button
@@ -149,7 +149,7 @@ export const InfoModal = ({
                             variant="primary"
                             type="submit"
                         >
-                            Save
+                            Guardar
                         </Button>
                     </div>
                 </form>

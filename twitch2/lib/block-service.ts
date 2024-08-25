@@ -10,7 +10,7 @@ export const isBlockedByUser = async (id: string) => {
         });
         
         if (!otherUser) {
-            throw new Error("User not found");
+            throw new Error("Usuario no encontrado");
         }
 
         if (otherUser.id === self.id) {
@@ -85,7 +85,7 @@ export const unblockUser = async (id: string) => {
     });
 
     if(!otherUser) {
-        throw new Error("User not found");
+        throw new Error("Usuario no encontrado");
     }
 
     const existingBlock = await db.block.findUnique({

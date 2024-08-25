@@ -31,16 +31,16 @@ export const Actions = ({
     const handleFollow = () => {
         startTransition(() => {
             onFollow(hostIdentity)
-                .then((data) => toast.success(`You are now following ${data.following.username}`))
-                .catch(() => toast.error("Something went wrong"))
+                .then((data) => toast.success(`No sigues a ${data.following.username}`))
+                .catch(() => toast.error("Algo ha salido mal"))
         });
     }
 
     const handleUnfollow = () => {
         startTransition(() => {
             onUnfollow(hostIdentity)
-                .then((data) => toast.success(`You have unfollowed ${data.following.username}`))
-                .catch(() => toast.error("Something went wrong"))
+                .then((data) => toast.success(`Dejaste de seguir a ${data.following.username}`))
+                .catch(() => toast.error("Algo ha salido mal"))
         });
     }
 
@@ -74,8 +74,8 @@ export const Actions = ({
                     : "fill-none" 
             )} />
             {isFollowing
-                ? "Unfollow"
-                : "Follow"
+                ? "Dejar de seguir"
+                : "Seguir"
             }
         </Button>
     )

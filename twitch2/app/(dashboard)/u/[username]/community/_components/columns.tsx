@@ -24,7 +24,7 @@ export const columns: ColumnDef<BlockedUser>[] = [
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Username
+        Nombre de usuario
         <ArrowUpDown className="ml-2 h-4 w-4" />
       </Button>
     ),
@@ -45,7 +45,7 @@ export const columns: ColumnDef<BlockedUser>[] = [
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Date blocked
+        Fecha de bloqueo
         <ArrowUpDown className="ml-2 h-4 w-4" />
       </Button>
     ),

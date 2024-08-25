@@ -62,7 +62,7 @@ export const Header = ({
                         <div className="font-semibold flex gap-x-1 items-center text-xs text-rose-500">
                             <UserIcon className="h-4 w-4" />
                             <p>
-                                {participantCount} {participantCount === 1 ? "viewer" : "viewers"}
+                                {participantCount} {participantCount === 1 ? "espectador" : "espectadores"}
                             </p>
                         </div>
                     ) : (

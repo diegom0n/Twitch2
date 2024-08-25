@@ -15,7 +15,7 @@ const CreatorPage = async ({
     const user = await getUserByUsername(params.username);
 
     if (!user || user.externalUserId !== externalUser?.id || !user.stream) {
-        throw new Error("Unauthorized");
+        throw new Error("No autorizado");
     }
     
     return (

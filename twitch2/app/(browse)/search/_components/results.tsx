@@ -18,11 +18,11 @@ export const Results = async ({
     return (
         <div>
             <h2 className="text-lg font-semibold mb-4">
-                Results for term &quot;{term}&quot;
+                Resultados para tu busqueda &quot;{term}&quot;
             </h2>
             {data.length === 0 && (
                 <p className="text-muted-foreground text-sm">
-                    No results found. Try searching for something else
+                    No se encontraron resultados. Intenta buscar otra cosa.
                 </p>
             )}
             <div className="flex flex-col gap-y-4">

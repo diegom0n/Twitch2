@@ -21,7 +21,7 @@ export const VariantToggle = () => {
         onChangeVariant(newVariant);
     };
 
-    const label = isChat ? "Community" : "Go back to chat";
+    const label = isChat ? "Comunidad" : "Volver al chat";
 
     return (
         <Hint label={label} side="left" asChild >

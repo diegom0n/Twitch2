@@ -33,8 +33,8 @@ export const CommunityItem = ({
 
         startTransition(() => {
             onBlock(participantIdentity)
-                .then(() => toast.success(`Blocked ${participantName}`))
-                .catch(() => toast.error("Something went wrong"));
+                .then(() => toast.success(`Bloqueaste a ${participantName}`))
+                .catch(() => toast.error("Algo ha salido mal"));
         });
     }
 
@@ -47,7 +47,7 @@ export const CommunityItem = ({
                 {participantName}
             </p>
             {isHost && !isSelf && (
-                <Hint label="Block">
+                <Hint label="Bloquear">
                     <Button 
                         variant="ghost"
                         disabled={isPending}

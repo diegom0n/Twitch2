@@ -14,15 +14,15 @@ export const ChatInfo = ({
 }: ChatInfoProps) => {
     const hint = useMemo(() => {
         if (isFollowersOnly && !isDelayed) {
-            return "Only followers can chat";
+            return "Solo los seguidores pueden hablar";
         }
 
         if (isDelayed && !isFollowersOnly) {
-            return "Messages are delayed by 3 seconds";
+            return "Los mensajes tienen un retraso de 3 segundos";
         }
 
         if (isDelayed && isFollowersOnly) {
-            return "Only followers can chat. Messages are delayed by 3 seconds"
+            return "Solo seguidores pueden hablar. Mensajes con un retraso de 3 segundos"
         }
 
         return "";
@@ -30,15 +30,15 @@ export const ChatInfo = ({
 
     const label = useMemo(() => {
         if (isFollowersOnly && !isDelayed) {
-            return "Followers Only";
+            return "Solo seguidores";
         }
 
         if (isDelayed && !isFollowersOnly) {
-            return "Slow mode";
+            return "Modo lento";
         }
 
         if (isDelayed && isFollowersOnly) {
-            return "Followers only and slow mode"
+            return "Solo seguidores y modo lento";
         }
 
         return "";

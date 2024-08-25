@@ -14,7 +14,7 @@ export const getSelf = async () => {
     });
 
     if (!user) {
-        throw new Error("Not found");
+        throw new Error("No encontrado");
     }
 
     return user;
@@ -32,7 +32,7 @@ export const getSelfByUsername = async (username: string) => {
     });
 
     if (!user) {
-        throw new Error("User not found")
+        throw new Error("Usuario no encontrado")
     }
 
     if (self.username !== user.username) {

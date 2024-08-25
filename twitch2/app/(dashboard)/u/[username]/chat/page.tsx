@@ -7,14 +7,14 @@ const ChatPage = async () => {
     const stream = await getStreamByUserId(self.id);
 
     if (!stream) {
-        throw new Error("Stream not found");
+        throw new Error("Stream no encontrado");
     }
 
     return (
         <div className="p-6">
             <div className="mb-4">
                 <h1 className="text-2xl font-bold">
-                    Chat settings
+                    Ajustes del chat
                 </h1>
             </div>
             <div className="space-y-4">
@@ -25,7 +25,7 @@ const ChatPage = async () => {
                 />
                 <ToggleCard 
                     field="isChatDelayed"
-                    label="Agregar delay"
+                    label="Modo lento"
                     value={stream.isChatDelayed}
                 />
                 <ToggleCard 

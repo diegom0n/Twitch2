@@ -37,7 +37,7 @@ export const KeyCard = ({
                         size="sm"
                         variant="link"
                     >
-                        {show ? "Hide" : "Show"}
+                        {show ? "Ocultar" : "Mostrar"}
                     </Button>
                 </div>
             </div>

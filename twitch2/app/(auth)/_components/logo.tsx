@@ -14,7 +14,7 @@ export const Logo = () => {
             <div className="bg-white rounded-full p-1">
                 <Image 
                     src="/spooky.svg"
-                    alt="Streamons"
+                    alt="Quasar"
                     height="80"
                     width="80"
                 />
@@ -24,10 +24,10 @@ export const Logo = () => {
                 font.className
                 )}>
                 <p className="text-xl font-semibold">
-                    StreamOn
+                    Quasar
                 </p>
                 <p className="text-sm text-muted-foreground">
-                    Let&apos;s play
+                    Una galaxia de entretenimiento.
                 </p>
             </div>
         </div>

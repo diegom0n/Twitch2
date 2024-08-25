@@ -18,7 +18,7 @@ const CommunityPage = async () => {
         <div className="p-6">
             <div className="mb-4">
                 <h1 className="text-2xl font-bold">
-                    Community Settings
+                    Ajustes de comunidad
                 </h1>
             </div>
             <DataTable columns={columns} data={formattedData} />
